@@ -1,11 +1,15 @@
-body {
+﻿body {
   font-family: 'Oswald', sans-serif;
-  color: #3c3839; }
-
+  color: #3c3839;
+}
 .icon {
   display: inline-block;
-  vertical-align: top; }
+  vertical-align: top;
+}
 
+.wrapper {
+
+}
 .header {
   position: fixed;
   left: 0;
@@ -13,63 +17,76 @@ body {
   width: 100%;
   background-color: #fff;
   height: 105px;
-  z-index: 10; }
+  z-index: 10;
+}
 
 .menu {
   list-style: none;
-  padding: 40px 0 0 0; }
-  .menu li {
+  padding: 40px 0 0 0;
+  li {
     position: relative;
-    float: left;
-    font-family: 'Merriweather', serif;
-    font-weight: 400;
-    margin: 0 0 0 49px; }
-    .menu li:after {
+    &:after {
       content: "/";
       color: #b31e1d;
       position: absolute;
       left: -28px;
       top: 2px;
-      font-weight: 400; }
-    .menu li:first-child {
-      margin-left: 0; }
-      .menu li:first-child:after {
-        display: none; }
-    .menu li a {
+      font-weight: 400;
+    }
+    &:first-child {
+      &:after {
+        display: none;
+      }
+      margin-left: 0;
+    }
+    float: left;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    margin: 0 0 0 49px;
+    a {
       font-size: 18px;
       color: #b31e1d;
-      font-weight: 400; }
+      font-weight: 400;
+    }
+  }
+}
 
 .phone {
   font-family: 'Merriweather', serif;
   font-weight: 400;
   font-style: italic;
-  padding: 21px 0 15px 0; }
-  .phone .icon-phone-icon {
-    margin-right: 5px; }
-  .phone a {
-    color: #262223; }
-    .phone a:hover {
-      text-decoration: none; }
-
+  padding: 21px 0 15px 0;
+  .icon-phone-icon {
+    margin-right: 5px;
+  }
+  a {
+    color: #262223;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
 .address {
   font-family: 'Merriweather', serif;
   font-weight: 400;
   font-style: italic;
-  color: #262223; }
-  .address .icon-address-icon {
-    margin-right: 10px; }
+  color: #262223;
+  .icon-address-icon {
+    margin-right: 10px;
+  }
+}
 
 .main {
-  padding-top: 105px; }
+  padding-top: 105px;
+}
+
 
 .preambule {
   background: url("../img/preambule-bg.jpg") center center no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
   min-height: 842px;
-  position: relative; }
-  .preambule__inner {
+  position: relative;
+  &__inner {
     width: 770px;
     padding: 53px 10px 58px 10px;
     background: #fff;
@@ -77,10 +94,8 @@ body {
     left: 50%;
     top: 50%;
     border: 1px solid #994e3d;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
-    .preambule__inner h1 {
+    transform: translate(-50%, -50%);
+    h1 {
       font-family: 'Merriweather', serif;
       font-weight: 600;
       font-style: italic;
@@ -88,36 +103,42 @@ body {
       color: #262223;
       font-size: 30px;
       text-align: center;
-      padding: 33px 0 14px 0; }
-    .preambule__inner h3 {
+      padding: 33px 0 14px 0;
+    }
+    h3 {
       font-size: 18px;
       text-align: center;
       color: #262223;
-      margin-bottom: 34px; }
-
+      margin-bottom: 34px;
+    }
+  }
+}
 .bigban {
   background: url("../img/bigban.png") no-repeat;
   width: 104px;
   height: 128px;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .sendForm {
-  text-align: center; }
-  .sendForm__input {
+  text-align: center;
+  &__input {
     vertical-align: top;
-    border: 1px solid #c44738 !important;
+    border: 1px solid #c44738!important;
     width: 300px;
     height: 50px;
     line-height: 48px;
     padding: 0 15px;
     font-size: 14px;
-    color: #aeadad; }
-  .sendForm__btn {
+    color: #aeadad;
+  }
+  &__btn {
     vertical-align: top;
-    border-color: #c44738;
-    background-image: -webkit-linear-gradient(90deg, #7f0707 0%, #cc3030 100%);
-    background-image: -ms-linear-gradient(90deg, #7f0707 0%, #cc3030 100%);
+    border-color: rgb(196, 71, 56);
+    background-image: -moz-linear-gradient( 90deg, rgb(127,7,7) 0%, rgb(204,48,48) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(127,7,7) 0%, rgb(204,48,48) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(127,7,7) 0%, rgb(204,48,48) 100%);
     border: 1px solid #c44738;
     width: 120px;
     height: 50px;
@@ -126,4 +147,6 @@ body {
     text-align: center;
     font-size: 14px;
     color: #fff;
-    margin-left: 7px; }
+    margin-left: 7px;
+  }
+}
